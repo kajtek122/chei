@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💗 Dla Ciebie</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffd6e7,#fff0f6)}.card{text-align:center;background:rgba(255,255,255,.82);padding:45px 30px;border-radius:30px;box-shadow:0 15px 50px rgba(180,70,120,.22);max-width:90%;width:520px}.heart-btn{border:0;background:#ff4f91;color:#fff;font-size:70px;width:150px;height:150px;border-radius:50%;cursor:pointer;box-shadow:0 10px 25px rgba(255,79,145,.35);transition:.2s}.heart-btn:hover{transform:scale(1.08)}h1{color:#d63384;font-size:30px}p{color:#777;font-size:18px}.message{display:none;margin-top:28px;color:#d63384;font-size:30px;font-weight:800;animation:pop .45s ease}.heart{position:fixed;pointer-events:none;font-size:28px;animation:float 2.2s ease-out forwards}@keyframes float{from{transform:translateY(0) scale(.8);opacity:1}to{transform:translateY(-260px) rotate(20deg) scale(1.6);opacity:0}}@keyframes pop{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>💗 Mam dla Ciebie coś ważnego...</h1>
+<p>Kliknij serduszko 👇</p>
+<button class="heart-btn" onclick="showMessage()">❤️</button>
+<div class="message" id="message">KUPKA ❤️ LUBIĘ KUPKĘ BARDZO 💩</div>
+</div>
+<script>
+function showMessage(){document.getElementById('message').style.display='block';for(let i=0;i<30;i++){const x=document.createElement('div');x.className='heart';x.textContent=Math.random()<.35?'💩':'❤️';x.style.left=(Math.random()*100)+'vw';x.style.top=(55+Math.random()*35)+'vh';x.style.animationDelay=(Math.random()*.5)+'s';document.body.appendChild(x);setTimeout(()=>x.remove(),2800)}}
+</script>
+</body>
+</html>
